@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "sudo npm install -g n && sudo n latest && next build",
+    "build": "sudo npm install -g n && n latest && next build",
     "start": "next start",
     "lint": "next lint"
   },
