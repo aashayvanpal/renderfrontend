@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm install && npm i next && next build",
+    "build": "npm install && npm i -g next && next build",
     "start": "next start",
     "lint": "next lint"
   },
