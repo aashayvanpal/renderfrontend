@@ -32,6 +32,11 @@ app.get('/getimage', (req, res) => {
 })
 
 
+app.get('/getMenuCard', (req, res) => {
+    console.log("static images pathname: ", path.join(__dirname + '/public/image1.png'))
+    res.sendFile(path.join(__dirname + '/public/pdfs/AaswadMenuCard-2023.pdf'))
+})
+
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
     console.log("App running on Port :" + PORT)
