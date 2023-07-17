@@ -28,7 +28,18 @@ app.get('/test', (req, res) => {
 
 app.get('/getimage', (req, res) => {
     console.log("static images pathname: ", path.join(__dirname + '/public/image1.png'))
-    res.sendFile(path.join(__dirname + '/public/image1.png'))
+    // res.sendFile(path.join(__dirname + '/public/image1.png'))
+
+    res.download(path.join(__dirname + '/public/image1.png'), 'report.pdf', (err) => {
+        if (err) {
+            // Handle error, but keep in mind the response may be partially-sent
+            // so check res.headersSent
+            console.log("error in downloading image")
+        } else {
+            // decrement a download credit, etc.
+            console.log("no error in downloading image")
+        }
+    })
 })
 
 
