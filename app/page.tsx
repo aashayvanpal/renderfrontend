@@ -11,13 +11,16 @@ export default function Home() {
         console.log("response for image:", res.data)
         setUsers(res.data)
       })
-      .catch(err => console.log("error in getting image", err))
+      .catch(err => {
+        alert("error occured" + err)
+        console.log("error in getting image", err)
+      })
   }
 
   return (
     <div className='flex flex-col gap-8'>
       <div className=''>
-        <button  className='border rounded-lg bg-red-300 p-4 hover:bg-green-500'  onClick={() => getTestData()}>get test Data</button>
+        <button className='border rounded-lg bg-red-300 p-4 hover:bg-green-500' onClick={() => getTestData()}>get test Data</button>
         <button onClick={() => alert('you have used alert')}>click me </button>
       </div>
       <div>
