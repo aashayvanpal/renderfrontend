@@ -14,6 +14,7 @@ export default function Home() {
     <div>
       broo
       {/* <button onClick={() => getImage()}>get my image</button> */}
+      <button onClick={() => alert('you have used alert')}>click me </button>
     </div>
   )
 }
