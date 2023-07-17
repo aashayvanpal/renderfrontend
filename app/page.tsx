@@ -1,9 +1,10 @@
+'use client'
 import axios from 'axios'
 import Link from 'next/link'
 
 export default function Home() {
   const getImage = () => {
-    axios.get('/getimage')
+    axios.get('http://localhost:5000/getimage')
       .then((res) => {
         console.log("response for image:", res)
       })
@@ -11,7 +12,8 @@ export default function Home() {
   }
   return (
     <div>
-      <button onClick={getImage}>get my image</button>
+      broo
+      <button onClick={() => getImage()}>get my image</button>
     </div>
   )
 }
