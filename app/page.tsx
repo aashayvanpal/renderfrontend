@@ -1,10 +1,17 @@
-import Image from 'next/image'
+import axios from 'axios'
 import Link from 'next/link'
 
 export default function Home() {
+  const getImage = () => {
+    axios.get('/getimage')
+      .then((res) => {
+        console.log("response for image:", res)
+      })
+      .catch(err => console.log("error in getting image", err))
+  }
   return (
     <div>
-      <Link href={'https://basic-node-lx95.onrender.com/getimage'}>get my image</Link>
+      <button onClick={getImage}>get my image</button>
     </div>
   )
 }
