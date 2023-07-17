@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Home() {
   const getImage = () => {
-    axios.get('http://localhost:5000/getimage')
+    axios.get('https://basic-node-lx95.onrender.com/test')
       .then((res) => {
         console.log("response for image:", res)
       })
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       broo
-      {/* <button onClick={() => getImage()}>get my image</button> */}
+      <button onClick={() => getImage()}>get my image</button>
       <button onClick={() => alert('you have used alert')}>click me </button>
     </div>
   )
