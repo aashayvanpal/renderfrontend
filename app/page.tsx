@@ -15,15 +15,21 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <div className='pb-10'>
-        <button onClick={() => getTestData()}>get test Data</button>
+    <div className='flex flex-col gap-8'>
+      <div className=''>
+        <button  className='border rounded-lg bg-red-300 p-4 hover:bg-green-500'  onClick={() => getTestData()}>get test Data</button>
         <button onClick={() => alert('you have used alert')}>click me </button>
       </div>
       <div>
 
         {/* <button onClick={() => alert('you have used alert')}>Get Menu Card </button> */}
         <Link className='border rounded-lg p-4 hover:bg-green-500' href={"https://basic-node-lx95.onrender.com/getMenuCard"}>Get Menu Card</Link>
+      </div>
+
+
+      <div>
+
+        <Link className='border rounded-lg bg-black text-white p-4 hover:bg-red-500' href={"/calendar"}>Calendar Menu</Link>
       </div>
 
       <div>
