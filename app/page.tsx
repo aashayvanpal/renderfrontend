@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       broo
-      <button onClick={() => getImage()}>get my image</button>
+      {/* <button onClick={() => getImage()}>get my image</button> */}
     </div>
   )
 }
