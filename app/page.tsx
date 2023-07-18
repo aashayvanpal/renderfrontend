@@ -10,7 +10,7 @@ export default function Home() {
       .then((res) => {
         console.log("response for image:", res.data)
         setUsers(res.data)
-        alert("fetched data:" + JSON.stringify(res.data))
+        // alert("fetched data:" + JSON.stringify(res.data))
       })
       .catch(err => {
         alert("error occured" + err)
